@@ -53,7 +53,7 @@ This container includes the following software, ensuring that your development e
 - **Lucky Framework dependencies**: All libraries and tools required to run Lucky applications.
 - **Lucky CLI**: Command-line interface for managing Lucky projects.
 - **PostgreSQL**: A powerful open-source relational database system.
-- **pgAdmin**: A popular administration and development platform for PostgreSQL.
+- **Beekeeper Studio**: A administration and development platform for PostgreSQL.
 - **Mailpit**: A tool for capturing and testing email sent by your application.
 
 ### VSCode Extensions
