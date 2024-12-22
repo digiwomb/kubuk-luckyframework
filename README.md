@@ -1,4 +1,4 @@
-# KUbuK
+# KUbuK for Lucky framework
 
 [![Version](https://img.shields.io/github/tag/digiwomb/kubuk-luckyframework.svg?maxAge=360&label=version)](https://github.com/digiwomb/kubuk-luckyframework/releases/latest)
 [![License](https://img.shields.io/github/license/digiwomb/kubuk-luckyframework.svg)](https://github.com/digiwomb/kubuk-luckyframework/blob/main/LICENSE)
