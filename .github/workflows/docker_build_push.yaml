@@ -14,7 +14,10 @@ jobs:
       - name: Get the latest release version
         id: get_version
         run: |
-          latest_version=$(curl -s "https://api.github.com/repos/${{ vars.DOCKERHUB_REPOSITORY }}/releases/latest" | jq -r .tag_name || curl -s "https://api.github.com/repos/${{ vars.DOCKERHUB_REPOSITORY }}/releases" | jq -r 'map(select(.prerelease)) | first | .tag_name')
+          latest_version=$(curl -s "https://api.github.com/repos/${{ vars.DOCKERHUB_REPOSITORY }}/releases/latest" | jq -r .tag_name
+          if [[ -n "$latest_version" ]]; then
+            latest_version=$(curl -s "https://api.github.com/repos/${{ vars.DOCKERHUB_REPOSITORY }}/releases" | jq -r 'map(select(.prerelease)) | first | .tag_name')
+          fi
           echo "latest_version=$latest_version" >> $GITHUB_ENV
           echo "Latest version: $latest_version"
 
