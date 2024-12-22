@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/digiwomb/kubuk-luckyframework.svg)](https://github.com/digiwomb/kubuk-luckyframework/blob/main/LICENSE)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/digiwomb/kubuk-luckyframework)](https://github.com/digiwomb/kubuk-luckyframework)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/digiwomb/kubuk/docker_build_push.yaml)
-[![Docker Image Version](https://img.shields.io/docker/v/digiwomb/kubuk)](https://hub.docker.com/r/digiwomb/kubuk-luckyframework)
+[![Docker Image Version](https://img.shields.io/docker/v/digiwomb/kubuk-luckyframework)](https://hub.docker.com/r/digiwomb/kubuk-luckyframework)
 
 
 KUbuK stands for **K**asm **Ubu**ntu with **K**DE. This setup combines the Kasm workspaces environment, an Ubuntu operating system, and the KDE desktop environment, offering a flexible and user-friendly interface tailored for diverse needs.
