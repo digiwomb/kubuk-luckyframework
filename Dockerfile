@@ -15,6 +15,6 @@ RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install luckyframework
 RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install mailpit
 
 RUN sudo -u kasm-user /bin/bash -c "code --install-extension crystal-lang-tools.crystal-lang \
-    && code --install-extension stephendolan.lucky
+    && code --install-extension stephendolan.lucky"
 
 RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install postgresql@17
