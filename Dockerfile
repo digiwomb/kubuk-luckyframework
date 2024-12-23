@@ -1,4 +1,4 @@
-FROM digiwomb/kubuk:1.2.0
+FROM digiwomb/kubuk:1.3.0
 
 RUN apt-get update && apt upgrade -y && apt-get install -y \
     crystal \
