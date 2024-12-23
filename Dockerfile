@@ -40,4 +40,4 @@ RUN apt update && apt install -y bruno
 
 RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install node
 
-RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/npm install --gloabl yarn
+RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/npm install --global yarn
