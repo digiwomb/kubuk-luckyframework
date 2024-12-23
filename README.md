@@ -37,11 +37,27 @@ I recommend copying the "Ubuntu KDE" workspace from https://kasmregistry.linuxse
     # delete abandoned chromium sessions
     rm -rf ~/.config/chromium/Singleton*
 
-    # create path to brew command
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/kasm-user/.bashrc
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+    # add paths
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+    if ! grep -Fxq 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' "/home/kasm-user/.bashrc"; then
+        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/kasm-user/.bashrc
+    fi
+    export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin:$PATH"
+    if ! grep -Fxq 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin:$PATH"' "/home/kasm-user/.bashrc"; then
+        echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin:$PATH"' >> /home/kasm-user/.bashrc
+    fi
 
-This will delete any active Chromium sessions before the desktop is started. These sessions can remain because Chromium is not completely terminated when the desktop is destroyed.
+    # start mailpit
+    nohup /home/linuxbrew/.linuxbrew/opt/mailpit/bin/mailpit &
+
+    # start postgresql
+    $HOMEBREW_PREFIX/opt/postgresql@17/bin/pg_ctl start -D $HOMEBREW_PREFIX/var/postgresql@17
+
+This will delete any active Chromium sessions before the desktop is started. These sessions can remain because Chromium is not completely terminated when the desktop is destroyed. Then it starts Mailpit and PostgreSQL. Also paths for e. g. brew command are added.
+
+
 
 ## Included Software
 
@@ -56,6 +72,8 @@ This container includes the following software, ensuring that your development e
 - **Beekeeper Studio**: A administration and development platform for PostgreSQL.
 - **Mailpit**: A tool for capturing and testing email sent by your application.
 - **Bruno**: Postman-like API testing tool
+- **Node.js**
+- **Yarn**
 
 ### VSCode Extensions
 
