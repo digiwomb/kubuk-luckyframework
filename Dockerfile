@@ -19,7 +19,8 @@ RUN sudo -u kasm-user /bin/bash -c "code --install-extension crystal-lang-tools.
 
 RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install postgresql@17
 
-RUN /bin/bash "echo 'export PATH="$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH"' >> /home/kasm-user/.bashrc"
+RUN echo >> /home/kasm-user/.bashrc \
+    && echo 'export PATH="$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH"' >> /home/kasm-user/.bashrc
 
 RUN /bin/bash -c "echo 'deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main' | tee /etc/apt/sources.list.d/beekeeper-studio-app.list"
 
