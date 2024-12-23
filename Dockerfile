@@ -38,6 +38,7 @@ RUN echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/bruno.gpg] http://debian.u
 
 RUN apt update && apt install -y bruno
 
-RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install node
-
-RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/npm install --gloabl yarn
+USER kasm-user
+RUN /home/linuxbrew/.linuxbrew/bin/brew install node
+RUN /home/linuxbrew/.linuxbrew/bin/npm install --global yarn
+USER root
