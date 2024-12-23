@@ -55,6 +55,7 @@ This container includes the following software, ensuring that your development e
 - **PostgreSQL**: A powerful open-source relational database system.
 - **Beekeeper Studio**: A administration and development platform for PostgreSQL.
 - **Mailpit**: A tool for capturing and testing email sent by your application.
+- **Bruno**: Postman-like API testing tool
 
 ### VSCode Extensions
 
