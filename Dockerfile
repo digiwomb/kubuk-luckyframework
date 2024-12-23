@@ -21,6 +21,6 @@ RUN sudo -u kasm-user /home/linuxbrew/.linuxbrew/bin/brew install postgresql@17
 
 RUN /bin/bash -c "echo 'deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main' | tee /etc/apt/sources.list.d/beekeeper-studio-app.list"
 
-RUN /bin/bash "wget -O- https://deb.beekeeperstudio.io/beekeeper.key | gpg --dearmor | tee /usr/share/keyrings/beekeeper.gpg"
+RUN /bin/bash -c "wget -O- https://deb.beekeeperstudio.io/beekeeper.key | gpg --dearmor | tee /usr/share/keyrings/beekeeper.gpg"
 
 RUN apt update && apt install -y beekeeper-studio
